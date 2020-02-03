@@ -4,6 +4,9 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     name: tests
+    env:
+      # prevents extra Cypress installation progress messages
+      CI: 1
     steps:
       - uses: actions/checkout@v1
       # install NPM dependencies but SKIP Cypress binary installation
@@ -21,10 +24,11 @@ jobs:
         id: cache-cypress
         uses: actions/cache@v1
         with:
-          path: ~/.cache/cypress
+          path: ~/.cache/Cypress
           key: cypress-${{ runner.os }}-${{ hashFiles('**/package.json') }}
       # now let's install Cypress binary
       - run: npx cypress install
       - run: npx cypress cache list
       # and run Cypress tests
       - run: npx cypress run
+      # Cypress binary will be cached after successful workflow finish
