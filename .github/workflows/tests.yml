@@ -11,3 +11,7 @@ jobs:
       - uses: bahmutov/npm-install@v1
         env:
           CYPRESS_INSTALL_BINARY: 0
+      # confirm there is no Cypress installed
+      # should return empty list of installed versions
+      - run: npx cypress cache path
+      - run: npx cypress cache list
