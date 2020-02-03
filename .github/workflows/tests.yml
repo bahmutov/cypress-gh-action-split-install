@@ -22,7 +22,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ~/.cache/cypress
-          key: cypress-${{ runner.os }}-${{ hashFiles('**/package.json') }
+          key: cypress-${{ runner.os }}-${{ hashFiles('**/package.json') }}
       # now let's install Cypress binary
       - run: npx cypress install
       - run: npx cypress cache list
