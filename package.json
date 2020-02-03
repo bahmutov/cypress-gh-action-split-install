@@ -1,0 +1,27 @@
+{
+  "name": "cypress-gh-action-split-install",
+  "version": "1.0.0",
+  "description": "cypress-gh-action-split-install",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahmutov/cypress-gh-action-split-install.git"
+  },
+  "keywords": [
+    "cypress",
+    "cypress-example",
+    "cypress-gh-action-example"
+  ],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahmutov/cypress-gh-action-split-install/issues"
+  },
+  "homepage": "https://github.com/bahmutov/cypress-gh-action-split-install#readme",
+  "devDependencies": {
+    "cypress": "3.8.3"
+  }
+}
